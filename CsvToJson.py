@@ -9,7 +9,7 @@ class CsvToJson:
 		return topLevelElements
 
 	def mapRows(self, configs, rows):
-		dataMap = dict({})
+		dataMap = {}
 
 		for row in rows:
 			parentId = row[configs.parentIdFieldName]
