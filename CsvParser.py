@@ -12,6 +12,8 @@ class CsvFileParser:
 			jsonObj = self.createJsonObject(headerFields, lineFields)
 			listOfRecords.insert(0, jsonObj)
 			line = fp.readline().rstrip('\n')
+
+		fp.close()
 		return listOfRecords
 
 	def createJsonObject(self, headerFields, rowFields):

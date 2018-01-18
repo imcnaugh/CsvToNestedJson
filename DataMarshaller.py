@@ -30,7 +30,10 @@ class DataMarshaller:
 			kingBigWigs.insert(0, kingBigWig)
 
 		j = json.dumps(kingBigWigs)
-		print j
+
+		fp = open(configs.outputFilePath, 'w')
+		fp.write(j)
+		fp.close()
 
 
 	def recCall(self, dataMap, currentElement, idFieldName, childFiledName):
